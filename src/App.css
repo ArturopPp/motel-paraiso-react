@@ -40,7 +40,7 @@
 /* src/App.css */
 body {
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f4f4f9;
 }
 
@@ -71,7 +71,6 @@ body {
   max-width: 1200px;
   margin: 30px auto 0 auto;
 }
-
 
 /* src/App.css (agregar al final) */
 .nav-links {

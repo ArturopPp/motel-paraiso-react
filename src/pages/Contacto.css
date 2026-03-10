@@ -23,15 +23,17 @@
   background: white;
   padding: 30px;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
-.contacto-form-section, .contacto-info-section {
+.contacto-form-section,
+.contacto-info-section {
   flex: 1; /* Ambas columnas toman el mismo espacio */
   min-width: 300px; /* Asegura que no se hagan muy pequeñas */
 }
 
-.contacto-form-section h3, .contacto-info-section h3 {
+.contacto-form-section h3,
+.contacto-info-section h3 {
   color: #e74c3c;
   margin-top: 0;
   border-bottom: 2px solid #eee;
@@ -52,7 +54,8 @@
   font-size: 14px;
 }
 
-.form-group input, .form-group textarea {
+.form-group input,
+.form-group textarea {
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 6px;
@@ -61,7 +64,8 @@
   transition: border-color 0.3s;
 }
 
-.form-group input:focus, .form-group textarea:focus {
+.form-group input:focus,
+.form-group textarea:focus {
   outline: none;
   border-color: #e74c3c;
 }

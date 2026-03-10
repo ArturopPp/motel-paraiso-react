@@ -1,18 +1,17 @@
 // src/App.js
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import './App.css'; 
+import React from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import "./App.css";
 
 // Importamos nuestra página de inicio
-import Home from './pages/Home';
-import Instalaciones from './pages/Instalaciones';
-import Contacto from './pages/Contacto';
+import Home from "./pages/Home";
+import Instalaciones from "./pages/Instalaciones";
+import Contacto from "./pages/Contacto";
 
 function App() {
   return (
     <Router>
       <div className="app-container">
-        
         {/* El menú de navegación ahora usa <Link> en lugar de <a> */}
         <header className="navbar">
           <h1>Motel Paraíso 🏨</h1>
@@ -29,7 +28,6 @@ function App() {
           <Route path="/instalaciones" element={<Instalaciones />} />
           <Route path="/contacto" element={<Contacto />} />
         </Routes>
-
       </div>
     </Router>
   );
