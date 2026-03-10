@@ -1,0 +1,94 @@
+/* src/pages/Contacto.css */
+.contacto-page {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contacto-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contacto-header h2 {
+  color: #2c3e50;
+  font-size: 32px;
+}
+
+/* Contenedor flexible para dividir en dos columnas en pantallas grandes */
+.contacto-container {
+  display: flex;
+  flex-wrap: wrap; /* Permite que colapse a una columna en móviles */
+  gap: 40px;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.contacto-form-section, .contacto-info-section {
+  flex: 1; /* Ambas columnas toman el mismo espacio */
+  min-width: 300px; /* Asegura que no se hagan muy pequeñas */
+}
+
+.contacto-form-section h3, .contacto-info-section h3 {
+  color: #e74c3c;
+  margin-top: 0;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+/* Estilos del Formulario */
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #555;
+  font-size: 14px;
+}
+
+.form-group input, .form-group textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  font-family: inherit;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+  outline: none;
+  border-color: #e74c3c;
+}
+
+.btn-enviar {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.btn-enviar:hover {
+  background-color: #c0392b;
+}
+
+/* Estilos de la info */
+.info-detalles p {
+  margin: 15px 0;
+  color: #444;
+}
+
+.mapa-container {
+  margin-top: 20px;
+}
