@@ -100,3 +100,22 @@ body {
 .nav-links a:hover {
   color: #e74c3c;
 }
+
+/* --- Estilos para Móviles (Pantallas menores a 768px) --- */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Pone el logo arriba y el menú abajo */
+    padding: 15px;
+    gap: 10px;
+  }
+
+  .nav-links {
+    gap: 15px;
+    font-size: 0.85rem;
+  }
+
+  .rooms-grid {
+    grid-template-columns: 1fr; /* Una sola habitación por fila */
+    padding: 10px;
+  }
+}
