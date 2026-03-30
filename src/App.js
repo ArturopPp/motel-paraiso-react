@@ -8,6 +8,9 @@ import Home from './pages/Home';
 import Instalaciones from './pages/Instalaciones';
 import Contacto from './pages/Contacto';
 
+// Importación del nuevo componente de WhatsApp
+import WhatsAppButton from './components/WhatsAppButton'; 
+
 function App() {
   return (
     <Router>
@@ -27,6 +30,9 @@ function App() {
           <Route path="/instalaciones" element={<Instalaciones />} />
           <Route path="/contacto" element={<Contacto />} />
         </Routes>
+
+        {/* El botón flotante aparece en todas las vistas */}
+        <WhatsAppButton />
 
       </div>
     </Router>

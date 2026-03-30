@@ -1,4 +1,7 @@
-/* src/pages/Instalaciones.css */
+/* =========================================
+   1. ESTILOS ORIGINALES DE LA GALERÍA
+   (Intactos, justo como los tenías)
+   ========================================= */
 .instalaciones-page {
   padding: 40px 20px;
   max-width: 1200px;
@@ -68,4 +71,174 @@
 
 .galeria-item:hover .galeria-overlay {
   opacity: 1;
+}
+
+/* =========================================
+   2. NUEVOS ESTILOS: SECCIÓN HABITACIONES
+   (Alineados a tu paleta de colores)
+   ========================================= */
+
+/* Espaciado entre secciones y títulos */
+.galeria-section {
+  margin-bottom: 60px;
+}
+
+.habitaciones-section {
+  margin-bottom: 40px;
+}
+
+.galeria-section h3, 
+.habitaciones-section h3 {
+  text-align: center;
+  color: #2c3e50; /* Respetando tu color de títulos */
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+/* Cuadrícula para las tarjetas de habitación */
+.habitaciones-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+/* Tarjeta individual */
+.habitacion-card {
+  background: #ffffff;
+  border-radius: 10px; /* Mismo borde redondeado que tu galería */
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Sombra suave y elegante */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.habitacion-card:hover {
+  transform: translateY(-5px); /* Efecto de flotar sutil */
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.habitacion-img-container {
+  position: relative;
+  height: 220px;
+}
+
+.habitacion-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Etiqueta de precio */
+.precio-tag {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background: rgba(44, 62, 80, 0.95); /* Tu color #2c3e50 pero con transparencia */
+  color: #fff;
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 14px;
+  border: 1px solid #d4af37; /* Un toque dorado sutil para dar estilo "Premium" */
+}
+
+.habitacion-info {
+  padding: 20px;
+}
+
+.habitacion-info h3 {
+  margin: 0 0 15px 0;
+  text-align: left;
+  font-size: 22px;
+}
+
+.habitacion-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.habitacion-info li {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+/* Botón de consultar disponibilidad */
+.btn-reservar-card {
+  width: 100%;
+  padding: 12px;
+  background: #2c3e50; /* Tu color principal */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-reservar-card:hover {
+  background: #d4af37; /* Cambia a dorado premium al pasar el mouse */
+  color: #1a1a1a;
+}
+
+/* =========================================
+   3. ESTILOS DEL MINI CALENDARIO
+   ========================================= */
+.calendario-mini {
+  background-color: #f8f9fa;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #e1e1e1;
+}
+
+.calendario-titulo {
+  font-size: 13px;
+  color: #2c3e50;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+  text-align: center;
+}
+
+.dias-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dia-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.dia-nombre {
+  font-size: 12px;
+  color: #555;
+  font-weight: 500;
+}
+
+/* El círculo indicador por defecto */
+.punto-estado {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+}
+
+/* Colores según el estado */
+.dia-item.libre .punto-estado {
+  background-color: #2ecc71; /* Verde esmeralda */
+  box-shadow: 0 0 5px rgba(46, 204, 113, 0.5);
+}
+
+.dia-item.ocupado .punto-estado {
+  background-color: #e74c3c; /* Tu rojo del botón */
+}
+
+/* Pequeño efecto al pasar el mouse sobre un día */
+.dia-item:hover .punto-estado {
+  transform: scale(1.3);
 }

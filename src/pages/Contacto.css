@@ -1,7 +1,8 @@
 /* src/pages/Contacto.css */
+
 .contacto-page {
   padding: 40px 20px;
-  max-width: 1000px;
+  max-width: 1200px; /* Un poco más ancho para que luzcan las dos columnas */
   margin: 0 auto;
 }
 
@@ -13,23 +14,30 @@
 .contacto-header h2 {
   color: #2c3e50;
   font-size: 32px;
+  margin-bottom: 10px;
 }
 
-/* Contenedor flexible para dividir en dos columnas en pantallas grandes */
+.contacto-header p {
+  color: #7f8c8d;
+  font-size: 1.1rem;
+}
+
+/* Contenedor flexible para dividir en dos columnas */
 .contacto-container {
   display: flex;
-  flex-wrap: wrap; /* Permite que colapse a una columna en móviles */
+  flex-wrap: wrap; 
   gap: 40px;
   background: white;
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  align-items: flex-start;
 }
 
 .contacto-form-section,
 .contacto-info-section {
-  flex: 1; /* Ambas columnas toman el mismo espacio */
-  min-width: 300px; /* Asegura que no se hagan muy pequeñas */
+  flex: 1; 
+  min-width: 320px; 
 }
 
 .contacto-form-section h3,
@@ -38,6 +46,7 @@
   margin-top: 0;
   border-bottom: 2px solid #eee;
   padding-bottom: 10px;
+  margin-bottom: 25px;
 }
 
 /* Estilos del Formulario */
@@ -54,60 +63,91 @@
   font-size: 14px;
 }
 
+/* Fila especial para Habitación y Fecha */
+.form-row-reserva {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 5px;
+}
+
+.form-row-reserva .form-group {
+  flex: 1;
+}
+
 .form-group input,
+.form-group select,
 .form-group textarea {
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 16px;
   font-family: inherit;
-  transition: border-color 0.3s;
+  transition: all 0.3s;
+  background-color: #fff;
 }
 
 .form-group input:focus,
+.form-group select:focus,
 .form-group textarea:focus {
   outline: none;
   border-color: #e74c3c;
+  box-shadow: 0 0 5px rgba(231, 76, 60, 0.2);
 }
 
 .btn-enviar {
   background-color: #e74c3c;
   color: white;
   border: none;
-  padding: 12px 20px;
+  padding: 15px 20px;
   border-radius: 6px;
   cursor: pointer;
   font-weight: bold;
   font-size: 16px;
   width: 100%;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.2s;
+  margin-top: 10px;
 }
 
 .btn-enviar:hover {
   background-color: #c0392b;
+  transform: translateY(-2px);
 }
 
 /* Estilos de la info */
 .info-detalles p {
-  margin: 15px 0;
+  margin: 18px 0;
   color: #444;
+  line-height: 1.6;
+}
+
+.info-detalles strong {
+  color: #2c3e50;
 }
 
 .mapa-container {
-  margin-top: 20px;
+  margin-top: 25px;
+  overflow: hidden;
+  border-radius: 15px;
+  border: 1px solid #eee;
 }
 
+/* Media Queries para móviles */
 @media (max-width: 768px) {
   .contacto-container {
-    flex-direction: column; /* Apila formulario y mapa */
-    padding: 15px;
+    flex-direction: column; 
+    padding: 20px;
+  }
+
+  .form-row-reserva {
+    flex-direction: column;
+    gap: 0;
   }
 
   .contacto-page {
-    padding: 20px 10px;
+    padding: 20px 15px;
   }
 
   .contacto-header h2 {
-    font-size: 24px;
+    font-size: 26px;
   }
 }
